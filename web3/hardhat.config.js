@@ -5,6 +5,7 @@ module.exports = {
   zksolc: {
     version: "1.3.9",
     compilerSource: "binary",
+    defaultNetwork: "Sepolia",
     settings: {
       optimizer: {
         enabled: true,
@@ -24,6 +25,14 @@ module.exports = {
       chainId: 324,
       zksync: true,
     },
+    hardhat: {},
+    Sepolia: {
+      url: "https://11155111.rpc.thirdweb.com",
+      account: [`0x${process.env.PRIVATE_KEY}`],
+      chainId: 11155111,
+
+    }
+
   },
   paths: {
     artifacts: "./artifacts-zk",
